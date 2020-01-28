@@ -79,6 +79,8 @@ OpenMergeInCurrent()
 
     IfExist, C:\Program Files\Sublime Merge\smerge.exe
         Run, "C:\Program Files\Sublime Merge\smerge.exe" "%full_path%"
+    else
+        Run, smerge.exe "%full_path%"
 }
 
 ; Opens the command shell 'code' in the directory browsed in Explorer.
@@ -95,7 +97,7 @@ OpenCodeInCurrent()
     	IfExist, C:\Program Files (x86)\Microsoft VS Code\Code.exe
         	Run, "C:\Program Files (x86)\Microsoft VS Code\Code.exe" "%full_path%"
         else
-        	Run, "C:\Users\sbiedermann\AppData\Local\Programs\Microsoft VS Code\Code.exe" "%full_path%"
+        	Run, "%LOCALAPPDATA%\Programs\Microsoft VS Code\Code.exe" "%full_path%"
 }
 
 ; Opens the command shell 'code' in the directory browsed in Explorer.
