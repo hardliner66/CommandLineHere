@@ -27,6 +27,10 @@ return
         RefreshEnvironment()
         OpenCmdInCurrent()
     return
+    ^#c::
+        RefreshEnvironment()
+        OpenTerminalInCurrent()
+    return
     #+c::
         RefreshEnvironment()
         OpenCodeInCurrent()
@@ -66,7 +70,18 @@ OpenCmdInCurrent()
     ; strip to bare address
     full_path := GetCurrentDirectory()
 
-    IfExist, %LOCALAPPDATA%\Microsoft\WindowsApps\wt.exe
+   Run,  cmd /K cd /D "%full_path%"
+}
+
+; Opens the command shell 'cmd' in the directory browsed in Explorer.
+; Note: expecting to be run when the active window is Explorer.
+;
+OpenTerminalInCurrent()
+{
+   ; strip to bare address
+   full_path := GetCurrentDirectory()
+
+   IfExist, %LOCALAPPDATA%\Microsoft\WindowsApps\wt.exe
       Run,  "%LOCALAPPDATA%\Microsoft\WindowsApps\wt.exe" -d "%full_path%"
    else
       Run,  cmd /K cd /D "%full_path%"
