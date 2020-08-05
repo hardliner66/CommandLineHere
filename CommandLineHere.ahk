@@ -82,6 +82,8 @@ OpenMergeInCurrent()
 
     IfExist, C:\Program Files\Sublime Merge\smerge.exe
         Run, "C:\Program Files\Sublime Merge\smerge.exe" "%full_path%"
+    else
+        Run, smerge.exe "%full_path%"
 }
 
 ; Opens the command shell 'code' in the directory browsed in Explorer.
