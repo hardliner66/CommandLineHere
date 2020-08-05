@@ -1,7 +1,10 @@
 # CommandLineHere
-Small AutoHotKey Script to create "open here" keybinds for tools i use
+Small AutoHotKey Script to create "open here" keybinds for tools i use.
 
-Current Keybindings:
+# Installation
+Download the exe and put into autostart.
+
+# Current Keybindings
 
 | keybind             | effect                | comments                                                  |
 |---------------------|-----------------------|-----------------------------------------------------------|
