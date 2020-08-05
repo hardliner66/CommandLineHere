@@ -66,7 +66,10 @@ OpenCmdInCurrent()
     ; strip to bare address
     full_path := GetCurrentDirectory()
 
-    Run,  cmd /K cd /D "%full_path%"
+    IfExist, %LOCALAPPDATA%\Microsoft\WindowsApps\wt.exe
+      Run,  "%LOCALAPPDATA%\Microsoft\WindowsApps\wt.exe" -d "%full_path%"
+   else
+      Run,  cmd /K cd /D "%full_path%"
 }
 
 ; Opens sublime merge in the directory browsed in Explorer.
@@ -95,7 +98,7 @@ OpenCodeInCurrent()
     	IfExist, C:\Program Files (x86)\Microsoft VS Code\Code.exe
         	Run, "C:\Program Files (x86)\Microsoft VS Code\Code.exe" "%full_path%"
         else
-        	Run, "C:\Users\sbiedermann\AppData\Local\Programs\Microsoft VS Code\Code.exe" "%full_path%"
+        	Run, "%LOCALAPPDATA%\Programs\Microsoft VS Code\Code.exe" "%full_path%"
 }
 
 ; Opens the command shell 'code' in the directory browsed in Explorer.
