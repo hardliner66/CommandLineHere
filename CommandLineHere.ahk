@@ -23,11 +23,11 @@ return
 
 #IfWinActive ahk_class ExploreWClass|CabinetWClass
 
-    #c::
+    ^#c::
         RefreshEnvironment()
         OpenCmdInCurrent()
     return
-    ^#c::
+    #c::
         RefreshEnvironment()
         OpenTerminalInCurrent()
     return
