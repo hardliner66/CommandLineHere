@@ -8,8 +8,8 @@ Download the exe and put into autostart.
 
 | keybind             | effect                | comments                                                  |
 |---------------------|-----------------------|-----------------------------------------------------------|
-| Windows + C         | Open Windows Terminal | If Windows Terminal is not found, this opens a cmd window |
-| Ctrl + Windows + C  | Open cmd              |                                                           |
-| Windows + Shift + C | Open vscode           |                                                           |
+| Windows + C         | Open Windows Terminal | If Windows Terminal is not found, open a cmd window       |
+| Ctrl + Windows + C  | Open vscode           |                                                           |
+| Windows + Shift + C | Open onivim2          | If onivim2 is not found, open vscode                      |
 | Ctrl + Shift + M    | Open Sublime Merge    |                                                           |
 | Windows + Shift + R | Open Toolman          | a custom tool I use                                       |

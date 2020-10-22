@@ -25,7 +25,7 @@ return
 
     ^#c::
         RefreshEnvironment()
-        OpenCmdInCurrent()
+        OpenCodeInCurrent()
     return
     #c::
         RefreshEnvironment()
@@ -33,7 +33,7 @@ return
     return
     #+c::
         RefreshEnvironment()
-        OpenCodeInCurrent()
+        OpenOniInCurrent()
     return
     #+r::
         RefreshEnvironment()
@@ -65,12 +65,15 @@ GetCurrentDirectory()
 ; Opens the command shell 'cmd' in the directory browsed in Explorer.
 ; Note: expecting to be run when the active window is Explorer.
 ;
-OpenCmdInCurrent()
+OpenOniInCurrent()
 {
     ; strip to bare address
     full_path := GetCurrentDirectory()
 
-   Run,  cmd /K cd /D "%full_path%"
+   IfExist, %LOCALAPPDATA%\Microsoft\WindowsApps\wt.exe
+      Run,  C:\Program Files\Onivim2\Oni2.exe "%full_path%"
+   else
+      OpenCodeInCurrent()
 }
 
 ; Opens the command shell 'cmd' in the directory browsed in Explorer.
