@@ -38,10 +38,6 @@ ScrollLock::CapsLock
         RefreshEnvironment()
         OpenCodeInCurrent()
     return
-    #+r::
-        RefreshEnvironment()
-        OpenToolManInCurrent()
-    return
     ^+m::
         RefreshEnvironment()
         OpenMergeInCurrent()
