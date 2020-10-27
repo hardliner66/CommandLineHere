@@ -21,11 +21,14 @@ return
 ; '#'
 ; The hash now sends a Windows keystroke; therefore, Send("#r") would send Win+r which launches the Run() dialog box.
 
+CapsLock::Esc
+ScrollLock::CapsLock
+
 #IfWinActive ahk_class ExploreWClass|CabinetWClass
 
     ^#c::
         RefreshEnvironment()
-        OpenCodeInCurrent()
+        OpenOniInCurrent()
     return
     #c::
         RefreshEnvironment()
@@ -33,7 +36,7 @@ return
     return
     #+c::
         RefreshEnvironment()
-        OpenOniInCurrent()
+        OpenCodeInCurrent()
     return
     #+r::
         RefreshEnvironment()
