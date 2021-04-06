@@ -23,6 +23,7 @@ return
 
 CapsLock::Esc
 ScrollLock::CapsLock
+#+q::!F4
 
 #IfWinActive ahk_class ExploreWClass|CabinetWClass
 
